@@ -475,7 +475,7 @@ export function Sidebar({
             </a>
             {isSidebarOpen && (
               <span className="flex h-5 items-center justify-center rounded-full bg-brandCta/20 px-2 text-[10px] font-bold text-brandCta ring-1 ring-inset ring-brandCta/30">
-                {flatRoutes.length}
+                {flatRoutes.length} tools
               </span>
             )}
           </div>

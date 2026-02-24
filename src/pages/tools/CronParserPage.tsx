@@ -38,6 +38,35 @@ export function CronParserPage(): ReactNode {
           </p>
         </div>
 
+        <div className="grid grid-cols-5 gap-2 sm:gap-3">
+          {["Minute", "Hour", "Day (Month)", "Month", "Day (Week)"].map(
+            (label, index) => {
+              const parts = cronExp.trim().split(/\s+/);
+              const part = parts[index];
+              const isActive = !!part && part !== "";
+              const displayValue = isActive ? part : "-";
+
+              return (
+                <div
+                  key={label}
+                  className={`flex flex-col items-center justify-center rounded-xl border p-2 sm:p-3 transition-colors duration-300 ${
+                    isActive
+                      ? "border-brandCta/40 bg-brandCta/10 text-brandCta"
+                      : "border-stone-800 bg-stone-900/40 text-stone-600"
+                  }`}
+                >
+                  <span className="font-mono text-base font-bold sm:text-xl">
+                    {displayValue}
+                  </span>
+                  <span className="mt-1.5 text-center text-[9px] font-bold uppercase tracking-widest text-stone-400 sm:text-[10px]">
+                    {label}
+                  </span>
+                </div>
+              );
+            },
+          )}
+        </div>
+
         <div className="rounded-xl border border-stone-800 bg-stone-950 p-4">
           <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-400">
             Human Readable
