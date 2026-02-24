@@ -44,6 +44,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Scan QR payloads via webcam in a mobile-style scanner view.',
     sectionId: 'capture',
     sectionLabel: 'Capture & Sharing',
+    icon: 'qr_scanner',
     component: QrScannerPage,
   },
   {
@@ -52,6 +53,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Generate downloadable QR images from URL or plain text payload.',
     sectionId: 'capture',
     sectionLabel: 'Capture & Sharing',
+    icon: 'qr_generator',
     component: QrGeneratorPage,
   },
   {
@@ -60,6 +62,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Drag-and-drop file intake with metadata preview.',
     sectionId: 'capture',
     sectionLabel: 'Capture & Sharing',
+    icon: 'file_upload',
     component: FileUploadPage,
   },
   {
@@ -68,6 +71,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Format, minify, validate, and copy JSON payloads.',
     sectionId: 'data',
     sectionLabel: 'Data Transformation',
+    icon: 'json_formatter',
     component: JsonFormatterPage,
   },
   {
@@ -76,6 +80,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Parse CSV text into table rows for quick review.',
     sectionId: 'data',
     sectionLabel: 'Data Transformation',
+    icon: 'csv_viewer',
     component: CsvViewerPage,
   },
   {
@@ -84,6 +89,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Encode/decode UTF-8 content for transport-safe payloads.',
     sectionId: 'data',
     sectionLabel: 'Data Transformation',
+    icon: 'base64',
     component: Base64Page,
   },
   {
@@ -92,6 +98,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Encode and decode URL components safely.',
     sectionId: 'data',
     sectionLabel: 'Data Transformation',
+    icon: 'url_codec',
     component: UrlEncodeDecodePage,
   },
   {
@@ -100,6 +107,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Compare two text blocks line-by-line.',
     sectionId: 'data',
     sectionLabel: 'Data Transformation',
+    icon: 'text_diff',
     component: TextDiffPage,
   },
   {
@@ -108,6 +116,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Decode JWT header and payload claims quickly.',
     sectionId: 'security',
     sectionLabel: 'Security & Identity',
+    icon: 'jwt_decoder',
     component: JwtDecoderPage,
   },
   {
@@ -116,6 +125,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Generate SHA-256 fingerprint for text values.',
     sectionId: 'security',
     sectionLabel: 'Security & Identity',
+    icon: 'hash',
     component: HashGeneratorPage,
   },
   {
@@ -124,6 +134,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Create random UUID values for entity identifiers.',
     sectionId: 'security',
     sectionLabel: 'Security & Identity',
+    icon: 'uuid',
     component: UuidGeneratorPage,
   },
   {
@@ -132,6 +143,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Generate secure random passwords using crypto entropy.',
     sectionId: 'security',
     sectionLabel: 'Security & Identity',
+    icon: 'password',
     component: PasswordGeneratorPage,
   },
   {
@@ -140,6 +152,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Compose API URLs with dynamic query params.',
     sectionId: 'productivity',
     sectionLabel: 'Productivity',
+    icon: 'url_builder',
     component: UrlBuilderPage,
   },
   {
@@ -148,6 +161,7 @@ export const TOOL_ROUTES: ToolRoute[] = [
     summary: 'Convert Unix timestamps and ISO date strings.',
     sectionId: 'productivity',
     sectionLabel: 'Productivity',
+    icon: 'timestamp',
     component: TimestampConverterPage,
   },
 ]
