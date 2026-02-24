@@ -1,75 +1,35 @@
-# React + TypeScript + Vite
+# Omni-Kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Omni-Kit is a state-of-the-art All-In-One platform designed to showcase a comprehensive suite of highly useful utilities and developer workflows. Built with React, TypeScript, and Vite, it aims to provide an extensive standard library of daily use browser-based tools, ensuring a seamless and fully client-side developer experience.
 
-Currently, two official plugins are available:
+## Intention
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Our intention is to provide a single unified interface that incorporates various small applications like Encoders, Decoders, File Utilities, Security Tools, and Productivity Enhancers into one premium dashboard. The application runs fully locally for maximum privacy.
 
-## React Compiler
+## Available Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Capture & Sharing**: QR Scanner, QR Generator, File Upload simulator.
+- **Data Transformation**: JSON Formatter, CSV Viewer, Base64 Tool, URL Encoder/Decoder, Text Diff.
+- **Security & Identity**: JWT Decoder, Hash Generator, UUID Generator, Password Generator.
+- **Productivity**: URL Builder, Timestamp Converter, Cron Parser.
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the ESLint configuration
+1. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+2. Start the local server:
+   ```bash
+   pnpm dev
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Design Philosophy
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The app is built following strict modern design principles:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Responsive Architecture**: Uses minimal custom CSS and heavy reliance on modern Tailwind utility.
+- **Smooth Aesthetics**: Premium dark mode interactions with subtle blurs, transitions, and glow properties following the UI Promax standard.
+- **Iconography over Text**: Modern UI patterns preferring vector icons to text strings for generic actions (like "Copy" and "Check" actions).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Enjoy maximum productivity without leaving the browser!

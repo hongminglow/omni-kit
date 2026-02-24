@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
 :root {
-  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   color-scheme: dark;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,6 +51,15 @@ textarea {
 
 *::-webkit-scrollbar-track {
   background: rgba(20, 17, 15, 0.45);
+}
+
+aside *::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+aside *::-webkit-scrollbar-thumb {
+  background: rgba(202, 138, 4, 0.5);
 }
 
 .scanner-line {
