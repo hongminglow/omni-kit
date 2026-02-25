@@ -5,6 +5,7 @@ import { ActionButton } from "./ActionButton";
 
 interface CopyButtonProps {
   value: string;
+  label?: string;
   tone?: "primary" | "neutral";
 }
 
@@ -60,6 +61,7 @@ function ErrorIcon(): ReactNode {
 
 export function CopyButton({
   value,
+  label = "Copy",
   tone = "neutral",
 }: CopyButtonProps): ReactNode {
   const [state, setState] = useState<"idle" | "checked" | "failed">("idle");
@@ -76,7 +78,10 @@ export function CopyButton({
   return (
     <ActionButton
       label={
-        <span className="flex items-center justify-center">{currentIcon}</span>
+        <span className="flex items-center justify-center" title={label}>
+          {currentIcon}
+          <span className="sr-only">{label}</span>
+        </span>
       }
       tone={state === "failed" ? "danger" : tone}
       onClick={() => {

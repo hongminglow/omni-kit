@@ -84,16 +84,24 @@ export function PasswordGeneratorPage(): ReactNode {
             setPassword(generated)
           }}
         />
-        <CopyButton value={password} label="Copy Password" />
       </div>
 
       <div className="rounded-xl border border-stone-700 bg-stone-950 p-3">
-        <p className="mb-2 text-xs uppercase tracking-wide text-stone-400">
-          Password Output
-        </p>
-        <code className="block break-all text-sm text-brandText">
-          {password || 'Generate to view result'}
-        </code>
+        <div className="flex items-stretch gap-3">
+          <div className="min-w-0 flex-1">
+            <p className="m-0 text-xs uppercase leading-none tracking-wide text-stone-400">
+              Password Output
+            </p>
+            <code className="mt-2 block break-all text-sm text-brandText">
+              {password || 'Generate to view result'}
+            </code>
+          </div>
+          {password ? (
+            <div className="flex items-center">
+              <CopyButton value={password} />
+            </div>
+          ) : null}
+        </div>
       </div>
 
       <div className="rounded-xl border border-stone-700 bg-stone-950 p-3">
